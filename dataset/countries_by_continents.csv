@@ -4,6 +4,7 @@ Africa,Angola
 Africa,Benin
 Africa,Botswana
 Africa,Burkina
+Africa,Burkina Faso
 Africa,Burundi
 Africa,Cameroon
 Africa,Cape Verde
@@ -11,10 +12,13 @@ Africa,Central African Republic
 Africa,Chad
 Africa,Comoros
 Africa,Congo
+Africa,Congo (Brazzaville)
 Africa,Democratic Republic of Congo
+Africa,Congo (Kinshasa)
 Africa,Djibouti
 Africa,Egypt
 Africa,Equatorial Guinea
+Africa,Eswatini
 Africa,Eritrea
 Africa,Ethiopia
 Africa,Gabon
@@ -43,6 +47,7 @@ Africa,Senegal
 Africa,Seychelles
 Africa,Sierra Leone
 Africa,Somalia
+Africa,Somaliland region
 Africa,South Africa
 Africa,South Sudan
 Africa,Sudan
@@ -63,6 +68,7 @@ Asia,Cambodia
 Asia,China
 Asia,East Timor
 Asia,Hong Kong
+Asia,Hong Kong S.A.R. of China
 Asia,India
 Asia,Indonesia
 Asia,Iran
@@ -80,6 +86,7 @@ Asia,Lebanon
 Asia,Malaysia
 Asia,Maldives
 Asia,Mongolia
+Asia,Myanmar
 Asia,Nepal
 Asia,Oman
 Asia,Pakistan
@@ -89,11 +96,14 @@ Asia,Russia
 Asia,Saudi Arabia
 Asia,Singapore
 Asia,Sri Lanka
+Asia,State of Palestine
 Asia,Syria
 Asia,Taiwan
+Asia,Taiwan Province of China
 Asia,Tajikistan
 Asia,Thailand
-Europe,Turkey
+Asia,Turkey
+Asia,Turkiye
 Asia,Turkmenistan
 Asia,United Arab Emirates
 Asia,Uzbekistan
@@ -122,11 +132,13 @@ Europe,Hungary
 Europe,Iceland
 Europe,Ireland
 Europe,Italy
+Europe,Kosovo
 Europe,Latvia
 Europe,Liechtenstein
 Europe,Lithuania
 Europe,Luxembourg
 Europe,Macedonia
+Europe,North Macedonia
 Europe,Malta
 Europe,Moldova
 Europe,Monaco
