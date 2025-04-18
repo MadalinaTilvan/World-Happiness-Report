@@ -7569,63 +7569,32 @@ a.anchor-link {
 <li>Multiple Linear Regression</li>
 <li>Random Forest Regression</li>
 <li>Random Forest Classifier</li>
-<li>K-Means</li>
-<li>K-Nearest Neighbors</li>
 <li>Decision Trees</li>
+<li>K-Nearest Neighbors</li>
 </ol>
 <h3 id="About-the-dataset">About the dataset<a class="anchor-link" href="#About-the-dataset">¶</a></h3><p>The <em>World Happiness Report</em> dataset contains features related to happiness, economic, social, and political indicators for different countries across multiple years.</p>
-<p><strong>Number of Instances:</strong> 4,000</p>
-<p><strong>Number of Attributes:</strong> 24 columns</p>
-<p><strong>Timeframe:</strong> 2005-2024</p>
+<p><strong>Number of Instances:</strong> 2,336</p>
+<p><strong>Number of Attributes:</strong> 9 columns</p>
+<p><strong>Timeframe:</strong> 2005-2022</p>
 <p><strong>Columns Overview:</strong></p>
 <ul>
 <li><p><code>Country</code>: Name of the country.</p>
 </li>
 <li><p><code>Year</code>: The year of the record.</p>
 </li>
-<li><p><code>Happiness_Score</code>: A numerical value indicating the happiness level.</p>
+<li><p><code>Happiness Score</code>: A numerical value indicating the happiness level.</p>
 </li>
-<li><p><code>GDP_per_Capita</code>: Economic output per person.</p>
+<li><p><code>GDP per Capita</code>: Economic output per person.</p>
 </li>
-<li><p><code>Social_Support</code>: Level of social connections and support.</p>
+<li><p><code>Social Support</code>: Level of social connections and support.</p>
 </li>
-<li><p><code>Healthy_Life_Expectancy</code>: Average life Expectancy at birth, for both sexes (years).</p>
+<li><p><code>Life Expectancy</code>: Average life Expectancy at birth, for both sexes (years).</p>
 </li>
 <li><p><code>Freedom</code>: Perceived freedom in decision-making.</p>
 </li>
 <li><p><code>Generosity</code>: A measure of charitable behavior.</p>
 </li>
-<li><p><code>Corruption_Perception</code>: Perception of corruption in society.</p>
-</li>
-<li><p><code>Unemployment_Rate</code>: Percentage of unemployed individuals.</p>
-</li>
-<li><p><code>Education_Index</code>: A measure of education quality.</p>
-</li>
-<li><p><code>Population</code>: Total population of the country.</p>
-</li>
-<li><p><code>Urbanization_Rate</code>: Percentage of people living in urban areas.</p>
-</li>
-<li><p><code>Life_Satisfaction</code>: A subjective measure of well-being.</p>
-</li>
-<li><p><code>Public_Trust</code>: Confidence in public institutions.</p>
-</li>
-<li><p><code>Mental_Health_Index</code>: A measure of overall mental health.</p>
-</li>
-<li><p><code>Income_Inequality</code>: Economic disparity metric.</p>
-</li>
-<li><p><code>Public_Health_Expenditure</code>: Government spending on health.</p>
-</li>
-<li><p><code>Climate_Index</code>: A measure of climate conditions.</p>
-</li>
-<li><p><code>Work_Life_Balance</code>: An index measuring work-life balance.</p>
-</li>
-<li><p><code>Internet_Access</code>: Percentage of population with internet.</p>
-</li>
-<li><p><code>Crime_Rate</code>: Reported crime level.</p>
-</li>
-<li><p><code>Political_Stability</code>: A measure of political security. and absence of violence/terrorism</p>
-</li>
-<li><p><code>Employment_Rate</code>: Percentage of employed individuals.</p>
+<li><p><code>Corruption</code>: Perception of corruption in society.</p>
 </li>
 </ul>
 </div>
@@ -7673,13 +7642,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s2">"dataset\World Happiness Report (2005-2023).csv"</span>
 
 <span class="n">happiness_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-<span class="n">happiness_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">happiness_df</span>
 </pre></div>
 </div>
 </div>
@@ -7690,7 +7659,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7729,7 +7698,7 @@ a.anchor-link {
 <td>3.724</td>
 <td>7.350</td>
 <td>0.451</td>
-<td>50.5</td>
+<td>50.500</td>
 <td>0.718</td>
 <td>0.168</td>
 <td>0.882</td>
@@ -7741,7 +7710,7 @@ a.anchor-link {
 <td>4.402</td>
 <td>7.509</td>
 <td>0.552</td>
-<td>50.8</td>
+<td>50.800</td>
 <td>0.679</td>
 <td>0.191</td>
 <td>0.850</td>
@@ -7753,7 +7722,7 @@ a.anchor-link {
 <td>4.758</td>
 <td>7.614</td>
 <td>0.539</td>
-<td>51.1</td>
+<td>51.100</td>
 <td>0.600</td>
 <td>0.121</td>
 <td>0.707</td>
@@ -7765,7 +7734,7 @@ a.anchor-link {
 <td>3.832</td>
 <td>7.581</td>
 <td>0.521</td>
-<td>51.4</td>
+<td>51.400</td>
 <td>0.496</td>
 <td>0.164</td>
 <td>0.731</td>
@@ -7777,13 +7746,86 @@ a.anchor-link {
 <td>3.783</td>
 <td>7.661</td>
 <td>0.521</td>
-<td>51.7</td>
+<td>51.700</td>
 <td>0.531</td>
 <td>0.238</td>
 <td>0.776</td>
 </tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>2331</th>
+<td>Zimbabwe</td>
+<td>2019</td>
+<td>2.694</td>
+<td>7.698</td>
+<td>0.759</td>
+<td>53.100</td>
+<td>0.632</td>
+<td>-0.047</td>
+<td>0.831</td>
+</tr>
+<tr>
+<th>2332</th>
+<td>Zimbabwe</td>
+<td>2020</td>
+<td>3.160</td>
+<td>7.596</td>
+<td>0.717</td>
+<td>53.575</td>
+<td>0.643</td>
+<td>0.006</td>
+<td>0.789</td>
+</tr>
+<tr>
+<th>2333</th>
+<td>Zimbabwe</td>
+<td>2021</td>
+<td>3.155</td>
+<td>7.657</td>
+<td>0.685</td>
+<td>54.050</td>
+<td>0.668</td>
+<td>-0.076</td>
+<td>0.757</td>
+</tr>
+<tr>
+<th>2334</th>
+<td>Zimbabwe</td>
+<td>2022</td>
+<td>3.296</td>
+<td>7.670</td>
+<td>0.666</td>
+<td>54.525</td>
+<td>0.652</td>
+<td>-0.070</td>
+<td>0.753</td>
+</tr>
+<tr>
+<th>2335</th>
+<td>Zimbabwe</td>
+<td>2023</td>
+<td>3.204</td>
+<td>7.641</td>
+<td>0.690</td>
+<td>54.050</td>
+<td>0.654</td>
+<td>-0.046</td>
+<td>0.766</td>
+</tr>
 </tbody>
 </table>
+<p>2336 rows × 9 columns</p>
 </div>
 </div>
 </div>
