@@ -7575,7 +7575,7 @@ a.anchor-link {
 <h3 id="About-the-dataset">About the dataset<a class="anchor-link" href="#About-the-dataset">¶</a></h3><p>The <em>World Happiness Report</em> dataset contains features related to happiness, economic, social, and political indicators for different countries across multiple years.</p>
 <p><strong>Number of Instances:</strong> 2,336</p>
 <p><strong>Number of Attributes:</strong> 9 columns</p>
-<p><strong>Timeframe:</strong> 2005-2022</p>
+<p><strong>Timeframe:</strong> 2005-2023</p>
 <p><strong>Columns Overview:</strong></p>
 <ul>
 <li><p><code>Country</code>: Name of the country.</p>
@@ -8221,7 +8221,7 @@ dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The happiness dataset contains several features with different types of scales, as we observed earlier. These scales range from percentages and proportions (values between 0 and 1) to rates or large numerical values. Some features (<code>Social_Support</code>, <code>Freedom</code>, <code>Corruption_Perception</code>, <code>Public_Trust</code>, <code>Political_Stability</code>) are between 0 and 1, suggesting they might represent percentages or ratios. In contrast, other features have values ranging from 0 to 100 or even larger scales (in millions or billions).</p>
+<p>The happiness dataset contains several features with different types of scales. These scales range from percentages and proportions (values between 0 and 1) to rates or large numerical values. Some features (<code>Freedom</code>, <code>Generosity</code>,<code>Corruption</code>) are between 0 and 1, suggesting they might represent percentages or ratios. In contrast, other features have values ranging from 0 to 100 or even larger scales (in millions or billions).</p>
 <p>This inconsistency in scales needs to be adressed to prevent models from being biased towards features with larger scales. In the next section, we will standardize and normalize the data to bring all the features to more comparable scales.</p>
 </div>
 </div>
@@ -8233,7 +8233,7 @@ dtype: object</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="4.-Feature-engineering">4. Feature engineering<a class="anchor-link" href="#4.-Feature-engineering">¶</a></h3><p>Let's create a new column by combining <code>Public_Health_Epxenditure</code> and <code>Mental_Health_Index</code>. This new feature will help capture if investments in public health systems affect the mental health in each country. This will show if happiness is influenced by the prioritization of public mental health.</p>
+<h3 id="4.-Feature-engineering">4. Feature engineering<a class="anchor-link" href="#4.-Feature-engineering">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8295,7 +8295,7 @@ dtype: int64</pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="5.-Normalize-numerical-features">5. Normalize numerical features<a class="anchor-link" href="#5.-Normalize-numerical-features">¶</a></h3><p>Features already normalized</p>
+<h3 id="5.-Normalize-numerical-features">5. Normalize numerical features<a class="anchor-link" href="#5.-Normalize-numerical-features">¶</a></h3>
 </div>
 </div>
 </div>
@@ -11076,8 +11076,7 @@ weighted avg       0.89      0.89      0.89       601
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The Decision Tree model had an R² of 0.7456, which is lower but still decent, explaining 74.56% of the variance in the data.</p>
-<p>The Decision Tree has a slightly lower AUC than the previous model 0.89.</p>
+<p>The Decision Tree model had an R² of 0.8885, which is lower but still decent, explaining 88.85% of the variance in the data. The Decision Tree has a slightly lower AUC than the previous model 0.89.</p>
 </div>
 </div>
 </div>
@@ -11231,7 +11230,7 @@ weighted avg       0.89      0.89      0.89       468
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Based on the evaluation results, the Random Forest model outperforms the other algorithms in both regression and classification tasks. It achieves the highest R² score (0.8326), indicating it explains the most variance in the data, and the lowest MAE and MSE, demonstrating fewer prediction errors. Its AUC of 0.98 shows excellent discriminative power. KNN also performs well with an AUC of 0.95, but slightly lags in accuracy and error metrics. The Decision Tree provides solid results but trails both Random Forest and KNN in overall performance. Therefore, Random Forest is the most effective model.</p>
+<p>Based on the evaluation results, the Random Forest model outperforms the other algorithms in both regression and classification tasks. It achieves the highest R² score ( 0.9334), indicating it explains the most variance in the data, and the lowest MAE and MSE, demonstrating fewer prediction errors. Its AUC of 0.98 shows excellent discriminative power. KNN also performs well with an AUC of 0.95, but slightly lags in accuracy and error metrics. The Decision Tree provides solid results but trails both Random Forest and KNN in overall performance. Therefore, Random Forest is the most effective model.</p>
 </div>
 </div>
 </div>
